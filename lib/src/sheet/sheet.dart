@@ -1032,7 +1032,7 @@ class Sheet {
   void setColAutoFit(int colIndex) {
     _checkMaxCol(colIndex);
 
-    if (_colAutoFit.isEmpty()) {
+    if (_colAutoFit.isEmpty) {
       while (colIndex >= _colAutoFit.length) {
         _colAutoFit.add(false);
       }
@@ -1047,7 +1047,7 @@ class Sheet {
     _checkMaxCol(colIndex);
     if (colWidth < 0) return;
 
-    if (_colWidth.isEmpty()) {
+    if (_colWidth.isEmpty) {
       while (colIndex >= _colWidth.length) {
         _colWidth.add(_defaultColumnWidth);
       }
