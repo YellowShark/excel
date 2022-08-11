@@ -1032,10 +1032,8 @@ class Sheet {
   void setColAutoFit(int colIndex) {
     _checkMaxCol(colIndex);
 
-    if (_colAutoFit.isEmpty) {
-      while (colIndex >= _colAutoFit.length) {
-        _colAutoFit.add(false);
-      }
+    while (colIndex >= _colAutoFit.length) {
+        _colAutoFit.add(true);
     }
     _colAutoFit[colIndex] = true;
   }
@@ -1047,10 +1045,8 @@ class Sheet {
     _checkMaxCol(colIndex);
     if (colWidth < 0) return;
 
-    if (_colWidth.isEmpty) {
-      while (colIndex >= _colWidth.length) {
-        _colWidth.add(_defaultColumnWidth);
-      }
+    while (colIndex >= _colWidth.length) {
+        _colWidth.add(colWidth);
     }
     _colWidth[colIndex] = colWidth;
   }
